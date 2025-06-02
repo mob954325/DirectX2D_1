@@ -3,40 +3,36 @@
   "WorkspaceRootPath": "D:\\lsh\\D2D\\0602\\MyD2DEngine\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|D:\\lsh\\D2D\\0602\\MyD2DEngine\\MyD2DEngine\\Application.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|solutionrelative:MyD2DEngine\\Application.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|D:\\lsh\\D2D\\0602\\MyD2DEngine\\MyD2DEngine\\framework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|solutionrelative:MyD2DEngine\\framework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|D:\\lsh\\D2D\\0602\\MyD2DEngine\\MyD2DEngine\\D2DRenderManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|solutionrelative:MyD2DEngine\\D2DRenderManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|D:\\lsh\\D2D\\0602\\MyD2DEngine\\MyD2DEngine\\Application.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|solutionrelative:MyD2DEngine\\Application.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{296643EA-FFAD-4A2D-B7D5-06F39CAA1580}|DemoGameApp\\DemoGameApp.vcxproj|D:\\lsh\\D2D\\0602\\MyD2DEngine\\DemoGameApp\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{296643EA-FFAD-4A2D-B7D5-06F39CAA1580}|DemoGameApp\\DemoGameApp.vcxproj|solutionrelative:DemoGameApp\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|D:\\lsh\\D2D\\0602\\MyD2DEngine\\MyD2DEngine\\D2DRenderManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|solutionrelative:MyD2DEngine\\D2DRenderManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{296643EA-FFAD-4A2D-B7D5-06F39CAA1580}|DemoGameApp\\DemoGameApp.vcxproj|D:\\lsh\\D2D\\0602\\MyD2DEngine\\DemoGameApp\\DemoGameApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{296643EA-FFAD-4A2D-B7D5-06F39CAA1580}|DemoGameApp\\DemoGameApp.vcxproj|solutionrelative:DemoGameApp\\DemoGameApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{296643EA-FFAD-4A2D-B7D5-06F39CAA1580}|DemoGameApp\\DemoGameApp.vcxproj|D:\\LSH\\D2D\\0602\\MYD2DENGINE\\MYD2DENGINE\\D2DRENDERMANAGER.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{296643EA-FFAD-4A2D-B7D5-06F39CAA1580}|DemoGameApp\\DemoGameApp.vcxproj|solutionrelative:MYD2DENGINE\\D2DRENDERMANAGER.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|D:\\lsh\\D2D\\0602\\MyD2DEngine\\MyD2DEngine\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|solutionrelative:MyD2DEngine\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{296643EA-FFAD-4A2D-B7D5-06F39CAA1580}|DemoGameApp\\DemoGameApp.vcxproj|D:\\LSH\\D2D\\0602\\MYD2DENGINE\\MYD2DENGINE\\APPLICATION.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{296643EA-FFAD-4A2D-B7D5-06F39CAA1580}|DemoGameApp\\DemoGameApp.vcxproj|solutionrelative:MYD2DENGINE\\APPLICATION.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|D:\\lsh\\D2D\\0602\\MyD2DEngine\\MyD2DEngine\\pch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|solutionrelative:MyD2DEngine\\pch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|D:\\lsh\\D2D\\0602\\MyD2DEngine\\MyD2DEngine\\Application.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|solutionrelative:MyD2DEngine\\Application.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{296643EA-FFAD-4A2D-B7D5-06F39CAA1580}|DemoGameApp\\DemoGameApp.vcxproj|D:\\lsh\\D2D\\0602\\MyD2DEngine\\DemoGameApp\\DemoGameApp.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{296643EA-FFAD-4A2D-B7D5-06F39CAA1580}|DemoGameApp\\DemoGameApp.vcxproj|solutionrelative:DemoGameApp\\DemoGameApp.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{296643EA-FFAD-4A2D-B7D5-06F39CAA1580}|DemoGameApp\\DemoGameApp.vcxproj|D:\\lsh\\D2D\\0602\\MyD2DEngine\\DemoGameApp\\DemoGameApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{296643EA-FFAD-4A2D-B7D5-06F39CAA1580}|DemoGameApp\\DemoGameApp.vcxproj|solutionrelative:DemoGameApp\\DemoGameApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|D:\\lsh\\D2D\\0602\\MyD2DEngine\\MyD2DEngine\\framework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|solutionrelative:MyD2DEngine\\framework.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,56 +42,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "framework.h",
-              "DocumentMoniker": "D:\\lsh\\D2D\\0602\\MyD2DEngine\\MyD2DEngine\\framework.h",
-              "RelativeDocumentMoniker": "MyD2DEngine\\framework.h",
-              "ToolTip": "D:\\lsh\\D2D\\0602\\MyD2DEngine\\MyD2DEngine\\framework.h",
-              "RelativeToolTip": "MyD2DEngine\\framework.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-02T07:19:01.484Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "pch.cpp",
-              "DocumentMoniker": "D:\\lsh\\D2D\\0602\\MyD2DEngine\\MyD2DEngine\\pch.cpp",
-              "RelativeDocumentMoniker": "MyD2DEngine\\pch.cpp",
-              "ToolTip": "D:\\lsh\\D2D\\0602\\MyD2DEngine\\MyD2DEngine\\pch.cpp",
-              "RelativeToolTip": "MyD2DEngine\\pch.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Game.cpp",
+              "DocumentMoniker": "D:\\lsh\\D2D\\0602\\MyD2DEngine\\DemoGameApp\\Game.cpp",
+              "RelativeDocumentMoniker": "DemoGameApp\\Game.cpp",
+              "ToolTip": "D:\\lsh\\D2D\\0602\\MyD2DEngine\\DemoGameApp\\Game.cpp",
+              "RelativeToolTip": "DemoGameApp\\Game.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-02T07:18:58.518Z",
+              "WhenOpened": "2025-06-02T07:44:53.584Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "pch.h",
-              "DocumentMoniker": "D:\\lsh\\D2D\\0602\\MyD2DEngine\\MyD2DEngine\\pch.h",
-              "RelativeDocumentMoniker": "MyD2DEngine\\pch.h",
-              "ToolTip": "D:\\lsh\\D2D\\0602\\MyD2DEngine\\MyD2DEngine\\pch.h",
-              "RelativeToolTip": "MyD2DEngine\\pch.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-02T07:18:56.994Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "DemoGameApp.cpp",
               "DocumentMoniker": "D:\\lsh\\D2D\\0602\\MyD2DEngine\\DemoGameApp\\DemoGameApp.cpp",
               "RelativeDocumentMoniker": "DemoGameApp\\DemoGameApp.cpp",
               "ToolTip": "D:\\lsh\\D2D\\0602\\MyD2DEngine\\DemoGameApp\\DemoGameApp.cpp",
               "RelativeToolTip": "DemoGameApp\\DemoGameApp.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-06-02T06:56:29.574Z",
               "EditorCaption": ""
@@ -103,14 +73,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Application.cpp",
+              "DocumentMoniker": "D:\\lsh\\D2D\\0602\\MyD2DEngine\\MyD2DEngine\\Application.cpp",
+              "RelativeDocumentMoniker": "MyD2DEngine\\Application.cpp",
+              "ToolTip": "D:\\lsh\\D2D\\0602\\MyD2DEngine\\MyD2DEngine\\Application.cpp",
+              "RelativeToolTip": "MyD2DEngine\\Application.cpp",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwB0AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-02T06:54:05.969Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "D2DRenderManager.cpp",
               "DocumentMoniker": "D:\\lsh\\D2D\\0602\\MyD2DEngine\\MyD2DEngine\\D2DRenderManager.cpp",
               "RelativeDocumentMoniker": "MyD2DEngine\\D2DRenderManager.cpp",
               "ToolTip": "D:\\lsh\\D2D\\0602\\MyD2DEngine\\MyD2DEngine\\D2DRenderManager.cpp",
               "RelativeToolTip": "MyD2DEngine\\D2DRenderManager.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAgwBUAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-02T06:54:35.658Z",
+              "WhenOpened": "2025-06-02T09:14:40.78Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DemoGameApp.h",
+              "DocumentMoniker": "D:\\lsh\\D2D\\0602\\MyD2DEngine\\DemoGameApp\\DemoGameApp.h",
+              "RelativeDocumentMoniker": "DemoGameApp\\DemoGameApp.h",
+              "ToolTip": "D:\\lsh\\D2D\\0602\\MyD2DEngine\\DemoGameApp\\DemoGameApp.h",
+              "RelativeToolTip": "DemoGameApp\\DemoGameApp.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-02T06:55:06.708Z",
               "EditorCaption": ""
             },
             {
@@ -121,48 +117,35 @@
               "RelativeDocumentMoniker": "MyD2DEngine\\D2DRenderManager.h",
               "ToolTip": "D:\\lsh\\D2D\\0602\\MyD2DEngine\\MyD2DEngine\\D2DRenderManager.h",
               "RelativeToolTip": "MyD2DEngine\\D2DRenderManager.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-02T06:51:04.926Z",
+              "WhenOpened": "2025-06-02T08:45:29.761Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Application.cpp",
-              "DocumentMoniker": "D:\\lsh\\D2D\\0602\\MyD2DEngine\\MyD2DEngine\\Application.cpp",
-              "RelativeDocumentMoniker": "MyD2DEngine\\Application.cpp",
-              "ToolTip": "D:\\lsh\\D2D\\0602\\MyD2DEngine\\MyD2DEngine\\Application.cpp",
-              "RelativeToolTip": "MyD2DEngine\\Application.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-02T06:54:05.969Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Application.h",
               "DocumentMoniker": "D:\\lsh\\D2D\\0602\\MyD2DEngine\\MyD2DEngine\\Application.h",
               "RelativeDocumentMoniker": "MyD2DEngine\\Application.h",
               "ToolTip": "D:\\lsh\\D2D\\0602\\MyD2DEngine\\MyD2DEngine\\Application.h",
               "RelativeToolTip": "MyD2DEngine\\Application.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-06-02T06:51:04.573Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DemoGameApp.h",
-              "DocumentMoniker": "D:\\lsh\\D2D\\0602\\MyD2DEngine\\DemoGameApp\\DemoGameApp.h",
-              "RelativeDocumentMoniker": "DemoGameApp\\DemoGameApp.h",
-              "ToolTip": "D:\\lsh\\D2D\\0602\\MyD2DEngine\\DemoGameApp\\DemoGameApp.h",
-              "RelativeToolTip": "DemoGameApp\\DemoGameApp.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAcAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "framework.h",
+              "DocumentMoniker": "D:\\lsh\\D2D\\0602\\MyD2DEngine\\MyD2DEngine\\framework.h",
+              "RelativeDocumentMoniker": "MyD2DEngine\\framework.h",
+              "ToolTip": "D:\\lsh\\D2D\\0602\\MyD2DEngine\\MyD2DEngine\\framework.h",
+              "RelativeToolTip": "MyD2DEngine\\framework.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-02T06:55:06.708Z",
+              "WhenOpened": "2025-06-02T08:47:35.922Z",
               "EditorCaption": ""
             }
           ]

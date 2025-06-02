@@ -9,7 +9,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     DemoGameApp demoGameApp;
 
     demoGameApp.Initialize();
-    // demoGameApp.Run();
+    demoGameApp.Run();
     demoGameApp.Uninitialize();
 
     return (int)1;

@@ -1,1 +1,5 @@
-﻿
+﻿  DemoGameApp.cpp
+D:\lsh\D2D\0602\MyD2DEngine\DemoGameApp\DemoGameApp.cpp(22,14): warning C4101: 'size' :참조되지 않은 지역 변수입니다.
+  Game.cpp
+  코드를 생성하고 있습니다...
+  DemoGameApp.vcxproj -> D:\lsh\D2D\0602\MyD2DEngine\x64\Debug\DemoGameApp.exe

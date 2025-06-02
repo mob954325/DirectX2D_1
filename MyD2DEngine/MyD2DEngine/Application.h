@@ -9,6 +9,7 @@ class D2DRenderManager;
 class Application
 {
 public:
+
 	D2DRenderManager* m_D2DRenderManager;
 
 	/// <summary>
@@ -17,17 +18,26 @@ public:
 	virtual void Initialize();
 	virtual void Uninitialize();
 
-	virtual LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
+	virtual void CALLBACK MessageProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 	virtual void Render();
 	virtual void Run();
 
+	int m_Width = 1024;
+	int m_Height = 768;
+
 protected:
-	HWND m_hwnd = nullptr;
 	ComPtr<ID3D11Device> m_d3dDevice;
 	ComPtr<IDXGISwapChain1> m_dxgiSwapChain;
 	ComPtr<ID2D1DeviceContext7> m_d2dDeviceContext;
 	ComPtr<ID2D1Bitmap1> m_d2dBitmapTarget;
 
-	UINT m_width = 1024;
-	UINT m_height = 768;
+private:
+	HINSTANCE		m_hInstance;
+	//std::wstring	m_windowName = L"WindowClass";
+	//std::wstring	m_titleName = L"Default Title Name";
+	//std::string		m_modulePath;
+	//std::string		m_workingPath;
+	HWND			m_hwnd;
+
+	bool m_resized = false;
 };

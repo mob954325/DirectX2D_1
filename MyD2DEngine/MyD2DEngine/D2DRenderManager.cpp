@@ -19,7 +19,7 @@ void D2DRenderManager::Uninitialize()
 	g_wicImagingFactory = nullptr;
 }
 
-HRESULT D2DRenderManager::CreateBitmapFromFile(const wchar_t* path, ID2D1DeviceContext7* pDeviceContext, ID2D1Bitmap1** outBitmap)
+HRESULT D2DRenderManager::CreateBitmapFromFile(const wchar_t* path, ID2D1DeviceContext7** pDeviceContext, ID2D1Bitmap1** outBitmap)
 {
 	ComPtr<IWICBitmapDecoder>     decoder;
 	ComPtr<IWICBitmapFrameDecode> frame;
@@ -56,6 +56,6 @@ HRESULT D2DRenderManager::CreateBitmapFromFile(const wchar_t* path, ID2D1DeviceC
 	);
 
 	// ⑥ DeviceContext에서 WIC 비트맵으로부터 D2D1Bitmap1 생성
-	hr = pDeviceContext->CreateBitmapFromWicBitmap(converter.Get(), &bmpProps, outBitmap);
+	hr = (*pDeviceContext)->CreateBitmapFromWicBitmap(converter.Get(), &bmpProps, outBitmap);
 	return hr;
 }

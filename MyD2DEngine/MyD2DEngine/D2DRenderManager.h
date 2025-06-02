@@ -16,7 +16,7 @@ public:
 	/// <param name="path">이미지 경로</param>
 	/// <param name="outBitmap">반환 될 Bitmap</param>
 	/// <returns>상태</returns>
-	HRESULT CreateBitmapFromFile(const wchar_t* path, ID2D1DeviceContext7* pDeviceContext, ID2D1Bitmap1** outBitmap);
+	HRESULT CreateBitmapFromFile(const wchar_t* path, ID2D1DeviceContext7** pDeviceContext, ID2D1Bitmap1** outBitmap);
 
 protected:
 	ComPtr<IWICImagingFactory> g_wicImagingFactory;

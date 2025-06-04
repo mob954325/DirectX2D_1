@@ -8,25 +8,51 @@ void D2DRenderManager::Initialize()
 	// Create WIC factory
 	hr = CoCreateInstance(CLSID_WICImagingFactory,
 		NULL, CLSCTX_INPROC_SERVER,
-		__uuidof(g_wicImagingFactory),
-		(void**)g_wicImagingFactory.GetAddressOf());
+		__uuidof(m_wicImagingFactory),
+		(void**)m_wicImagingFactory.GetAddressOf());
 
 	assert(SUCCEEDED(hr));
 }
 
 void D2DRenderManager::Uninitialize()
 {
-	g_wicImagingFactory = nullptr;
+	m_wicImagingFactory = nullptr;
 }
 
-HRESULT D2DRenderManager::CreateBitmapFromFile(const wchar_t* path, ID2D1DeviceContext7** pDeviceContext, ID2D1Bitmap1** outBitmap)
+void D2DRenderManager::Render()
+{
+	assert(m_d2dDeviceContext);
+
+	m_d2dDeviceContext->BeginDraw();
+
+	// Clear
+	m_d2dDeviceContext->Clear(D2D1::ColorF(D2D1::ColorF::DarkSlateBlue));
+
+	// bitmap 랜더링
+	for (auto bitmap : bitmaps)
+	{	
+		m_d2dDeviceContext->DrawBitmap(bitmap.Get());
+	}
+
+	m_d2dDeviceContext->EndDraw();
+}
+
+void D2DRenderManager::GetD2D1DeviceContext7(ID2D1DeviceContext7* pD2D1DeviceContext7)
+{
+	if (pD2D1DeviceContext7)
+	{
+		m_d2dDeviceContext = pD2D1DeviceContext7;
+	}
+}
+
+HRESULT D2DRenderManager::CreateBitmapFromFile(const wchar_t* path)
 {
 	ComPtr<IWICBitmapDecoder>     decoder;
 	ComPtr<IWICBitmapFrameDecode> frame;
 	ComPtr<IWICFormatConverter>   converter;
 
 	// ① 디코더 생성
-	HRESULT hr = g_wicImagingFactory->CreateDecoderFromFilename(
+	HRESULT hr = m_wicImagingFactory->CreateDecoderFromFilename(
 		path, nullptr, GENERIC_READ, WICDecodeMetadataCacheOnLoad, &decoder);
 	if (FAILED(hr)) return hr;
 
@@ -35,7 +61,7 @@ HRESULT D2DRenderManager::CreateBitmapFromFile(const wchar_t* path, ID2D1DeviceC
 	if (FAILED(hr)) return hr;
 
 	// ③ 포맷 변환기 생성
-	hr = g_wicImagingFactory->CreateFormatConverter(&converter);
+	hr = m_wicImagingFactory->CreateFormatConverter(&converter);
 	if (FAILED(hr)) return hr;
 
 	// ④ GUID_WICPixelFormat32bppPBGRA로 변환
@@ -56,6 +82,11 @@ HRESULT D2DRenderManager::CreateBitmapFromFile(const wchar_t* path, ID2D1DeviceC
 	);
 
 	// ⑥ DeviceContext에서 WIC 비트맵으로부터 D2D1Bitmap1 생성
-	hr = (*pDeviceContext)->CreateBitmapFromWicBitmap(converter.Get(), &bmpProps, outBitmap);
+	ComPtr<ID2D1Bitmap1> outBitmap;
+	hr = m_d2dDeviceContext->CreateBitmapFromWicBitmap(converter.Get(), &bmpProps, outBitmap.GetAddressOf());
+
+	// bitmap 저장
+	bitmaps.push_back(outBitmap);
+
 	return hr;
 }

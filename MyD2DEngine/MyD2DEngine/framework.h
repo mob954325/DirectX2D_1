@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <Windows.h>
+#include <vector>
 #include <assert.h>
 #include <wrl.h>		// ComPtr 사용을 위한 헤더 
 

@@ -29,11 +29,22 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
 void Application::Initialize()
 {
-	//if (!m_isWindowOpen)
-	//{
-	//	m_isWindowOpen = true;
-	//}
-	InitializeWindow();
+	// Window 생성
+	WNDCLASS wc = {};
+	wc.lpfnWndProc = WindowProc;
+	wc.hInstance = m_hInstance;
+	wc.lpszClassName = L"MyD2DWindowClass";
+	RegisterClass(&wc);
+
+	SIZE clientSize = { (LONG)m_Width,(LONG)m_Height };
+	RECT clientRect = { 0, 0, clientSize.cx, clientSize.cy };
+	AdjustWindowRect(&clientRect, WS_OVERLAPPEDWINDOW, FALSE);
+
+	m_hwnd = CreateWindowEx(0, L"MyD2DWindowClass", L"D2D1 Clear Example",
+		WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT,
+		clientRect.right - clientRect.left, clientRect.bottom - clientRect.top,
+		nullptr, nullptr, m_hInstance, this);
+	ShowWindow(m_hwnd, SW_SHOW);
 
 	// D3D11 디바이스 생성
 	D3D_FEATURE_LEVEL featureLevel;
@@ -85,16 +96,18 @@ void Application::Initialize()
 	// D2DManager 초기화
 	m_D2DRenderManager = new D2DRenderManager;
 	m_D2DRenderManager->Initialize();
+	m_D2DRenderManager->GetD2D1DeviceContext7(m_d2dDeviceContext.Get());
 }
 
 void Application::Uninitialize()
 {
+	m_D2DRenderManager->Uninitialize();
+	delete m_D2DRenderManager;
+
 	m_d3dDevice = nullptr;
 	m_dxgiSwapChain = nullptr;
 	m_d2dDeviceContext = nullptr;
-
-	m_D2DRenderManager->Uninitialize();
-	delete m_D2DRenderManager;
+	m_d2dBitmapTarget = nullptr;
 }
 
 void Application::MessageProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
@@ -125,8 +138,11 @@ void Application::MessageProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 	}
 	break;
 	case WM_EXITSIZEMOVE:
-		//Uninitialize();
-		//Initialize();
+		if (m_resized)
+		{
+			ResizeSwapChainBuffers();
+			m_resized = false;
+		}
 		break;
 	default:
 		break;
@@ -135,9 +151,8 @@ void Application::MessageProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 
 void Application::Render()
 {
-	m_d2dDeviceContext->BeginDraw();
-	m_d2dDeviceContext->Clear(D2D1::ColorF(D2D1::ColorF::DarkSlateBlue));
-	m_d2dDeviceContext->EndDraw();
+	m_D2DRenderManager->Render();
+	m_dxgiSwapChain->Present(1, 0);
 }
 
 void Application::Run()
@@ -158,21 +173,32 @@ void Application::Run()
 	}
 }
 
-void Application::InitializeWindow()
+void Application::ResizeSwapChainBuffers()
 {
-	WNDCLASS wc = {};
-	wc.lpfnWndProc = WindowProc;
-	wc.hInstance = m_hInstance;
-	wc.lpszClassName = L"MyD2DWindowClass";
-	RegisterClass(&wc);
+	if (!m_dxgiSwapChain || !m_d2dDeviceContext) return;
 
-	SIZE clientSize = { (LONG)m_Width,(LONG)m_Height };
-	RECT clientRect = { 0, 0, clientSize.cx, clientSize.cy };
-	AdjustWindowRect(&clientRect, WS_OVERLAPPEDWINDOW, FALSE);
+	m_d2dDeviceContext->SetTarget(nullptr);
+	m_d2dBitmapTarget.Reset();
 
-	m_hwnd = CreateWindowEx(0, L"MyD2DWindowClass", L"D2D1 Clear Example",
-		WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT,
-		clientRect.right - clientRect.left, clientRect.bottom - clientRect.top,
-		nullptr, nullptr, m_hInstance, this);
-	ShowWindow(m_hwnd, SW_SHOW);
+	// 1. 스왑체인 버퍼 리사이즈
+	HRESULT hr = m_dxgiSwapChain->ResizeBuffers(0, m_Width, m_Height, DXGI_FORMAT_UNKNOWN, 0);
+	if (FAILED(hr))
+	{
+		// 오류 로그 출력
+		return;
+	}
+
+	// 2. 백버퍼 다시 얻고 D2D Bitmap 다시 생성
+	ComPtr<IDXGISurface> backBuffer;
+	m_dxgiSwapChain->GetBuffer(0, IID_PPV_ARGS(&backBuffer));
+
+	D2D1_BITMAP_PROPERTIES1 bmpProps = D2D1::BitmapProperties1(
+		D2D1_BITMAP_OPTIONS_TARGET | D2D1_BITMAP_OPTIONS_CANNOT_DRAW,
+		D2D1::PixelFormat(DXGI_FORMAT_B8G8R8A8_UNORM, D2D1_ALPHA_MODE_PREMULTIPLIED)
+	);
+	m_d2dDeviceContext->CreateBitmapFromDxgiSurface(backBuffer.Get(), &bmpProps, m_d2dBitmapTarget.GetAddressOf());
+	m_d2dDeviceContext->SetTarget(m_d2dBitmapTarget.Get());
+
+	// 렌더 매니저에도 다시 설정
+	m_D2DRenderManager->GetD2D1DeviceContext7(m_d2dDeviceContext.Get());
 }

@@ -26,10 +26,7 @@ public:
 	int m_Height = 768;
 
 protected:
-	/// <summary>
-	/// 윈도우창 만드는 함수
-	/// </summary>
-	void InitializeWindow();
+	void ResizeSwapChainBuffers();
 
 	ComPtr<ID3D11Device> m_d3dDevice;
 	ComPtr<IDXGISwapChain1> m_dxgiSwapChain;

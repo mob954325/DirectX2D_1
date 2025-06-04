@@ -13,8 +13,8 @@ public:
 	D2DRenderManager* m_D2DRenderManager;
 
 	/// <summary>
-	/// 윈도우 생성 및 D2DRenderManager 초기화
-	/// </summary>
+	/// D2DRenderManager 초기화
+	/// </summary>	
 	virtual void Initialize();
 	virtual void Uninitialize();
 
@@ -26,6 +26,11 @@ public:
 	int m_Height = 768;
 
 protected:
+	/// <summary>
+	/// 윈도우창 만드는 함수
+	/// </summary>
+	void InitializeWindow();
+
 	ComPtr<ID3D11Device> m_d3dDevice;
 	ComPtr<IDXGISwapChain1> m_dxgiSwapChain;
 	ComPtr<ID2D1DeviceContext7> m_d2dDeviceContext;
@@ -39,5 +44,6 @@ private:
 	//std::string		m_workingPath;
 	HWND			m_hwnd;
 
+	bool m_isWindowOpen = false; // 윈도우가 열렸는지 확인하는 변수
 	bool m_resized = false;
 };

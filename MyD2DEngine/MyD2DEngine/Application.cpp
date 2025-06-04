@@ -29,21 +29,11 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
 void Application::Initialize()
 {
-	WNDCLASS wc = {};
-	wc.lpfnWndProc = WindowProc;
-	wc.hInstance = m_hInstance;
-	wc.lpszClassName = L"MyD2DWindowClass";
-	RegisterClass(&wc);
-
-	SIZE clientSize = { (LONG)m_Width,(LONG)m_Height };
-	RECT clientRect = { 0, 0, clientSize.cx, clientSize.cy };
-	AdjustWindowRect(&clientRect, WS_OVERLAPPEDWINDOW, FALSE);
-
-	m_hwnd = CreateWindowEx(0, L"MyD2DWindowClass", L"D2D1 Clear Example",
-		WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT,
-		clientRect.right - clientRect.left, clientRect.bottom - clientRect.top,
-		nullptr, nullptr, m_hInstance, nullptr);
-	ShowWindow(m_hwnd, SW_SHOW);
+	//if (!m_isWindowOpen)
+	//{
+	//	m_isWindowOpen = true;
+	//}
+	InitializeWindow();
 
 	// D3D11 디바이스 생성
 	D3D_FEATURE_LEVEL featureLevel;
@@ -99,12 +89,10 @@ void Application::Initialize()
 
 void Application::Uninitialize()
 {
-	// ptr 초기화
 	m_d3dDevice = nullptr;
 	m_dxgiSwapChain = nullptr;
 	m_d2dDeviceContext = nullptr;
 
-	// D2DManager 초기화
 	m_D2DRenderManager->Uninitialize();
 	delete m_D2DRenderManager;
 }
@@ -115,6 +103,7 @@ void Application::MessageProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 	{
 	case WM_DESTROY:
 		PostQuitMessage(0);
+		m_isWindowOpen = false;
 		break;
 	case WM_KEYDOWN:
 		if (wParam == VK_SPACE)
@@ -135,6 +124,10 @@ void Application::MessageProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 		}
 	}
 	break;
+	case WM_EXITSIZEMOVE:
+		//Uninitialize();
+		//Initialize();
+		break;
 	default:
 		break;
 	}
@@ -150,20 +143,36 @@ void Application::Render()
 void Application::Run()
 {
 	MSG msg = {};
-	while (TRUE)
+	while (msg.message != WM_QUIT)
 	{
-
 		if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
 		{
-			if (msg.message == WM_QUIT || msg.message == WM_DESTROY)
-				break;
-
-			//윈도우 메시지 처리 
-			TranslateMessage(&msg); // 키입력관련 메시지 변환  WM_KEYDOWN -> WM_CHAR
+			TranslateMessage(&msg);
 			DispatchMessage(&msg);
 		}
-
-		// Update();
-		Render();
+		else 
+		{
+			//Update();
+			Render();
+		}
 	}
+}
+
+void Application::InitializeWindow()
+{
+	WNDCLASS wc = {};
+	wc.lpfnWndProc = WindowProc;
+	wc.hInstance = m_hInstance;
+	wc.lpszClassName = L"MyD2DWindowClass";
+	RegisterClass(&wc);
+
+	SIZE clientSize = { (LONG)m_Width,(LONG)m_Height };
+	RECT clientRect = { 0, 0, clientSize.cx, clientSize.cy };
+	AdjustWindowRect(&clientRect, WS_OVERLAPPEDWINDOW, FALSE);
+
+	m_hwnd = CreateWindowEx(0, L"MyD2DWindowClass", L"D2D1 Clear Example",
+		WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT,
+		clientRect.right - clientRect.left, clientRect.bottom - clientRect.top,
+		nullptr, nullptr, m_hInstance, this);
+	ShowWindow(m_hwnd, SW_SHOW);
 }

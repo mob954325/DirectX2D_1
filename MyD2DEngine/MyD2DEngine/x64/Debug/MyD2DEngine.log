@@ -1,4 +1,6 @@
-﻿  Application.cpp
+﻿  pch.cpp
+  Application.cpp
   D2DRenderManager.cpp
+  MyD2DEngine.cpp
   코드를 생성하고 있습니다...
-  MyD2DEngine.vcxproj -> D:\lsh\D2D\0602\MyD2DEngine\x64\Debug\MyD2DEngine.lib
+  MyD2DEngine.vcxproj -> D:\lsh\Github\DirectX2D_1\MyD2DEngine\x64\Debug\MyD2DEngine.lib

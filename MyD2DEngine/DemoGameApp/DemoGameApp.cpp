@@ -29,3 +29,10 @@ void DemoGameApp::Render()
 	m_d2dDeviceContext->EndDraw();
 	m_dxgiSwapChain->Present(1, 0);
 }
+
+void DemoGameApp::Uninitialize()
+{
+	__super::Uninitialize();
+
+	g_d2dBitmapFromFile = nullptr;
+}

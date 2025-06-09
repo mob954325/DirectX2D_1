@@ -2,6 +2,10 @@
 #include "Application.h"
 #include "D2DRenderManager.h"
 
+#include "Singleton.h"
+#include "Input.h"
+#include "GameTime.h"
+
 LRESULT CALLBACK WindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
 	Application* pThis = nullptr;
@@ -97,6 +101,9 @@ void Application::Initialize()
 	m_D2DRenderManager = new D2DRenderManager;
 	m_D2DRenderManager->Initialize();
 	m_D2DRenderManager->GetD2D1DeviceContext7(m_d2dDeviceContext.Get());
+
+	// GameTime 초기화
+	Singleton<GameTime>::GetInstance().InitTime();
 }
 
 void Application::Uninitialize()
@@ -155,6 +162,11 @@ void Application::Render()
 	m_dxgiSwapChain->Present(1, 0);
 }
 
+void Application::Update()
+{
+	// 업데이트 내용
+}
+
 void Application::Run()
 {
 	MSG msg = {};
@@ -167,7 +179,9 @@ void Application::Run()
 		}
 		else 
 		{
-			//Update();
+			Singleton<Input>::GetInstance().Update();
+			Singleton<GameTime>::GetInstance().UpdateTime();
+			Update();
 			Render();
 		}
 	}

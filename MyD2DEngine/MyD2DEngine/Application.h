@@ -20,7 +20,8 @@ public:
 
 	virtual void CALLBACK MessageProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 	virtual void Render();
-	virtual void Run();
+	virtual void Update();
+	void Run();
 
 	int m_Width = 1024;
 	int m_Height = 768;

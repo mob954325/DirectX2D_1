@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include "framework.h"
+#include "Transform.h"
 
 using namespace Microsoft::WRL;
 
@@ -20,10 +21,11 @@ public:
 	/// <param name="outBitmap">반환 될 Bitmap</param>
 	/// <returns>상태</returns>
 	HRESULT CreateBitmapFromFile(const wchar_t* path);
+	HRESULT CreateBitmapFromFile(const wchar_t* path, Transform* transform);
 
 protected:
 	ComPtr<IWICImagingFactory> m_wicImagingFactory;
 	ComPtr<ID2D1DeviceContext7> m_d2dDeviceContext;
 
-	std::vector<ComPtr<ID2D1Bitmap1>> bitmaps;
+	std::vector<std::pair<ComPtr<ID2D1Bitmap1>, Transform*>> bitmaps;
 };

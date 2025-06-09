@@ -31,7 +31,23 @@ void D2DRenderManager::Render()
 	// bitmap 랜더링
 	for (auto bitmap : bitmaps)
 	{	
-		m_d2dDeviceContext->DrawBitmap(bitmap.Get());
+		if (bitmap.second != nullptr)
+		{
+			m_d2dDeviceContext->SetTransform(bitmap.second->ToWorldMatrix());
+		}
+		else
+		{
+			m_d2dDeviceContext->SetTransform(D2D1::Matrix3x2F::Identity());
+		}
+
+		auto size = bitmap.first->GetSize();
+		D2D1_RECT_F drawRect = D2D1::RectF(
+			-size.width / 2.0f,
+			-size.height / 2.0f,
+			size.width / 2.0f,
+			size.height / 2.0f
+		);
+		m_d2dDeviceContext->DrawBitmap(bitmap.first.Get(), drawRect);
 	}
 
 	m_d2dDeviceContext->EndDraw();
@@ -46,6 +62,11 @@ void D2DRenderManager::GetD2D1DeviceContext7(ID2D1DeviceContext7* pD2D1DeviceCon
 }
 
 HRESULT D2DRenderManager::CreateBitmapFromFile(const wchar_t* path)
+{
+	return CreateBitmapFromFile(path, {});
+}
+
+HRESULT D2DRenderManager::CreateBitmapFromFile(const wchar_t* path, Transform* transform)
 {
 	ComPtr<IWICBitmapDecoder>     decoder;
 	ComPtr<IWICBitmapFrameDecode> frame;
@@ -85,8 +106,7 @@ HRESULT D2DRenderManager::CreateBitmapFromFile(const wchar_t* path)
 	ComPtr<ID2D1Bitmap1> outBitmap;
 	hr = m_d2dDeviceContext->CreateBitmapFromWicBitmap(converter.Get(), &bmpProps, outBitmap.GetAddressOf());
 
-	// bitmap 저장
-	bitmaps.push_back(outBitmap);
+	bitmaps.push_back(std::make_pair(outBitmap, transform));
 
 	return hr;
 }

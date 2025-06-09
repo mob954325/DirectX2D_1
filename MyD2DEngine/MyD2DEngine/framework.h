@@ -7,6 +7,8 @@
 #include <vector>
 #include <assert.h>
 #include <wrl.h>		// ComPtr 사용을 위한 헤더 
+#include <d2d1.h>
+#include <d2d1helper.h>
 
 #include <d3d11.h>
 #pragma comment(lib, "d3d11.lib")

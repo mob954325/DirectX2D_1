@@ -3,24 +3,36 @@
   "WorkspaceRootPath": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{296643EA-FFAD-4A2D-B7D5-06F39CAA1580}|DemoGameApp\\DemoGameApp.vcxproj|D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\DemoGameApp\\DemoGameApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{296643EA-FFAD-4A2D-B7D5-06F39CAA1580}|DemoGameApp\\DemoGameApp.vcxproj|solutionrelative:DemoGameApp\\DemoGameApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\BitmapRenderer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|solutionrelative:MyD2DEngine\\BitmapRenderer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\D2DRenderManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|solutionrelative:MyD2DEngine\\D2DRenderManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{296643EA-FFAD-4A2D-B7D5-06F39CAA1580}|DemoGameApp\\DemoGameApp.vcxproj|D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\DemoGameApp\\DemoGameApp.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{296643EA-FFAD-4A2D-B7D5-06F39CAA1580}|DemoGameApp\\DemoGameApp.vcxproj|solutionrelative:DemoGameApp\\DemoGameApp.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\BitmapRenderer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|solutionrelative:MyD2DEngine\\BitmapRenderer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\D2DRenderManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|solutionrelative:MyD2DEngine\\D2DRenderManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\Transform.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|solutionrelative:MyD2DEngine\\Transform.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\D2DRenderManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|solutionrelative:MyD2DEngine\\D2DRenderManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\IRenderer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|solutionrelative:MyD2DEngine\\IRenderer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\MyD2DEngine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|solutionrelative:MyD2DEngine\\MyD2DEngine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\GameTime.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|solutionrelative:MyD2DEngine\\GameTime.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{296643EA-FFAD-4A2D-B7D5-06F39CAA1580}|DemoGameApp\\DemoGameApp.vcxproj|D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\DemoGameApp\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{296643EA-FFAD-4A2D-B7D5-06F39CAA1580}|DemoGameApp\\DemoGameApp.vcxproj|solutionrelative:DemoGameApp\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\Application.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -31,14 +43,16 @@
       "RelativeMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|solutionrelative:MyD2DEngine\\Transform.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{296643EA-FFAD-4A2D-B7D5-06F39CAA1580}|DemoGameApp\\DemoGameApp.vcxproj|D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\DemoGameApp\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{296643EA-FFAD-4A2D-B7D5-06F39CAA1580}|DemoGameApp\\DemoGameApp.vcxproj|solutionrelative:DemoGameApp\\Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{296643EA-FFAD-4A2D-B7D5-06F39CAA1580}|DemoGameApp\\DemoGameApp.vcxproj|D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\DemoGameApp\\DemoGameApp.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{296643EA-FFAD-4A2D-B7D5-06F39CAA1580}|DemoGameApp\\DemoGameApp.vcxproj|solutionrelative:DemoGameApp\\DemoGameApp.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\lsh\\2Q\\D2D\\Template\\Direct2D_1.3-main\\Direct2D_1.3-main\\08_Transform\\TransformWinmain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{296643EA-FFAD-4A2D-B7D5-06F39CAA1580}|DemoGameApp\\DemoGameApp.vcxproj|D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\DemoGameApp\\DemoGameApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{296643EA-FFAD-4A2D-B7D5-06F39CAA1580}|DemoGameApp\\DemoGameApp.vcxproj|solutionrelative:DemoGameApp\\DemoGameApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{80EDA4A4-A27B-C94E-3ECB-33A5C3883B89}|C:\\Users\\User\\AppData\\Roaming\\Microsoft\\VisualStudio\\17.0_e90613f7\\SingleFileISense\\_sfi_6368ff4d-de1a-4d7d-a375-5537baad87e8_.vcxproj|D:\\LSH\\2Q\\D2D\\TEMPLATE\\DIRECT2D_1.3-MAIN\\DIRECT2D_1.3-MAIN\\08_TRANSFORM\\TRANSFORM.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\Transform.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|solutionrelative:MyD2DEngine\\Transform.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -48,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
@@ -66,141 +80,157 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DemoGameApp.h",
-              "DocumentMoniker": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\DemoGameApp\\DemoGameApp.h",
-              "RelativeDocumentMoniker": "DemoGameApp\\DemoGameApp.h",
-              "ToolTip": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\DemoGameApp\\DemoGameApp.h",
-              "RelativeToolTip": "DemoGameApp\\DemoGameApp.h",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAcwCAAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-09T11:32:28.141Z",
+              "DocumentIndex": 6,
+              "Title": "GameTime.cpp",
+              "DocumentMoniker": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\GameTime.cpp",
+              "RelativeDocumentMoniker": "MyD2DEngine\\GameTime.cpp",
+              "ToolTip": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\GameTime.cpp",
+              "RelativeToolTip": "MyD2DEngine\\GameTime.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-10T07:48:20.315Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
+              "Title": "MyD2DEngine.cpp",
+              "DocumentMoniker": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\MyD2DEngine.cpp",
+              "RelativeDocumentMoniker": "MyD2DEngine\\MyD2DEngine.cpp",
+              "ToolTip": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\MyD2DEngine.cpp",
+              "RelativeToolTip": "MyD2DEngine\\MyD2DEngine.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-10T07:48:19.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BitmapRenderer.cpp",
+              "DocumentMoniker": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\BitmapRenderer.cpp",
+              "RelativeDocumentMoniker": "MyD2DEngine\\BitmapRenderer.cpp",
+              "ToolTip": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\BitmapRenderer.cpp",
+              "RelativeToolTip": "MyD2DEngine\\BitmapRenderer.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-10T07:46:46.34Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BitmapRenderer.h",
+              "DocumentMoniker": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\BitmapRenderer.h",
+              "RelativeDocumentMoniker": "MyD2DEngine\\BitmapRenderer.h",
+              "ToolTip": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\BitmapRenderer.h",
+              "RelativeToolTip": "MyD2DEngine\\BitmapRenderer.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-10T07:45:08.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "D2DRenderManager.h",
               "DocumentMoniker": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\D2DRenderManager.h",
               "RelativeDocumentMoniker": "MyD2DEngine\\D2DRenderManager.h",
               "ToolTip": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\D2DRenderManager.h",
               "RelativeToolTip": "MyD2DEngine\\D2DRenderManager.h",
-              "ViewState": "AgIAABAAAAAAAAAAAAAuwCQAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-06-10T02:23:18.41Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "D2DRenderManager.cpp",
               "DocumentMoniker": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\D2DRenderManager.cpp",
               "RelativeDocumentMoniker": "MyD2DEngine\\D2DRenderManager.cpp",
               "ToolTip": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\D2DRenderManager.cpp",
               "RelativeToolTip": "MyD2DEngine\\D2DRenderManager.cpp",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAcwIUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAAAJUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-06-10T01:37:29.01Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DemoGameApp.cpp",
-              "DocumentMoniker": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\DemoGameApp\\DemoGameApp.cpp",
-              "RelativeDocumentMoniker": "DemoGameApp\\DemoGameApp.cpp",
-              "ToolTip": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\DemoGameApp\\DemoGameApp.cpp",
-              "RelativeToolTip": "DemoGameApp\\DemoGameApp.cpp",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAAAHwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-09T11:32:18.935Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Transform.cpp",
-              "DocumentMoniker": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\Transform.cpp",
-              "RelativeDocumentMoniker": "MyD2DEngine\\Transform.cpp",
-              "ToolTip": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\Transform.cpp",
-              "RelativeToolTip": "MyD2DEngine\\Transform.cpp",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAQwDQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-10T01:38:18.959Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "Application.cpp",
               "DocumentMoniker": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\Application.cpp",
               "RelativeDocumentMoniker": "MyD2DEngine\\Application.cpp",
               "ToolTip": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\Application.cpp",
               "RelativeToolTip": "MyD2DEngine\\Application.cpp",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAGYAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAALoAAAAAAAAAAAAAAGYAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-06-10T03:02:11.838Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Transform.h",
-              "DocumentMoniker": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\Transform.h",
-              "RelativeDocumentMoniker": "MyD2DEngine\\Transform.h",
-              "ToolTip": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\Transform.h",
-              "RelativeToolTip": "MyD2DEngine\\Transform.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAbAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "IRenderer.h",
+              "DocumentMoniker": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\IRenderer.h",
+              "RelativeDocumentMoniker": "MyD2DEngine\\IRenderer.h",
+              "ToolTip": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\IRenderer.h",
+              "RelativeToolTip": "MyD2DEngine\\IRenderer.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-09T11:43:10.107Z",
+              "WhenOpened": "2025-06-10T07:42:20.657Z",
               "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "7b8d3c42-2f74-42b0-9053-2f615851dac4",
-        "Display": 0,
-        "X": 1884,
-        "Y": 303,
-        "Width": 1427,
-        "Height": 923,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
+            },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "TransformWinmain.cpp",
-              "DocumentMoniker": "D:\\lsh\\2Q\\D2D\\Template\\Direct2D_1.3-main\\Direct2D_1.3-main\\08_Transform\\TransformWinmain.cpp",
-              "RelativeDocumentMoniker": "..\\..\\..\\2Q\\D2D\\Template\\Direct2D_1.3-main\\Direct2D_1.3-main\\08_Transform\\TransformWinmain.cpp",
-              "ToolTip": "D:\\lsh\\2Q\\D2D\\Template\\Direct2D_1.3-main\\Direct2D_1.3-main\\08_Transform\\TransformWinmain.cpp",
-              "RelativeToolTip": "..\\..\\..\\2Q\\D2D\\Template\\Direct2D_1.3-main\\Direct2D_1.3-main\\08_Transform\\TransformWinmain.cpp",
-              "ViewState": "AgIAACYAAAAAAAAAAAAAACwAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-10T01:33:55.934Z",
+              "DocumentIndex": 10,
+              "Title": "DemoGameApp.h",
+              "DocumentMoniker": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\DemoGameApp\\DemoGameApp.h",
+              "RelativeDocumentMoniker": "DemoGameApp\\DemoGameApp.h",
+              "ToolTip": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\DemoGameApp\\DemoGameApp.h",
+              "RelativeToolTip": "DemoGameApp\\DemoGameApp.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-09T11:32:28.141Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "Transform.h",
-              "DocumentMoniker": "D:\\lsh\\2Q\\D2D\\Template\\Direct2D_1.3-main\\Direct2D_1.3-main\\08_Transform\\Transform.h",
-              "RelativeDocumentMoniker": "..\\..\\..\\2Q\\D2D\\Template\\Direct2D_1.3-main\\Direct2D_1.3-main\\08_Transform\\Transform.h",
-              "ToolTip": "D:\\lsh\\2Q\\D2D\\Template\\Direct2D_1.3-main\\Direct2D_1.3-main\\08_Transform\\Transform.h",
-              "RelativeToolTip": "..\\..\\..\\2Q\\D2D\\Template\\Direct2D_1.3-main\\Direct2D_1.3-main\\08_Transform\\Transform.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAWAAAAAAAAAA==",
+              "DocumentMoniker": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\Transform.h",
+              "RelativeDocumentMoniker": "MyD2DEngine\\Transform.h",
+              "ToolTip": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\Transform.h",
+              "RelativeToolTip": "MyD2DEngine\\Transform.h",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAAEAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-10T01:34:00.286Z",
+              "WhenOpened": "2025-06-09T11:43:10.107Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DemoGameApp.cpp",
+              "DocumentMoniker": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\DemoGameApp\\DemoGameApp.cpp",
+              "RelativeDocumentMoniker": "DemoGameApp\\DemoGameApp.cpp",
+              "ToolTip": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\DemoGameApp\\DemoGameApp.cpp",
+              "RelativeToolTip": "DemoGameApp\\DemoGameApp.cpp",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-09T11:32:18.935Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Transform.cpp",
+              "DocumentMoniker": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\Transform.cpp",
+              "RelativeDocumentMoniker": "MyD2DEngine\\Transform.cpp",
+              "ToolTip": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\Transform.cpp",
+              "RelativeToolTip": "MyD2DEngine\\Transform.cpp",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAQwDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-10T01:38:18.959Z"
             }
           ]
         }

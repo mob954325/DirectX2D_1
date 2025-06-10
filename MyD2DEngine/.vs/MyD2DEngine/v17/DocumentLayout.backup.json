@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\D2DRenderManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|solutionrelative:MyD2DEngine\\D2DRenderManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{296643EA-FFAD-4A2D-B7D5-06F39CAA1580}|DemoGameApp\\DemoGameApp.vcxproj|D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\DemoGameApp\\DemoGameApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{296643EA-FFAD-4A2D-B7D5-06F39CAA1580}|DemoGameApp\\DemoGameApp.vcxproj|solutionrelative:DemoGameApp\\DemoGameApp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\D2DRenderManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|solutionrelative:MyD2DEngine\\D2DRenderManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\Application.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|solutionrelative:MyD2DEngine\\Application.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\Transform.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|solutionrelative:MyD2DEngine\\Transform.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{296643EA-FFAD-4A2D-B7D5-06F39CAA1580}|DemoGameApp\\DemoGameApp.vcxproj|D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\DemoGameApp\\DemoGameApp.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -17,14 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\D2DRenderManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|solutionrelative:MyD2DEngine\\D2DRenderManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\Transform.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|solutionrelative:MyD2DEngine\\Transform.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\Application.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|solutionrelative:MyD2DEngine\\Application.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BFC4ABB4-7986-4987-9264-217684AD1420}|MyD2DEngine\\MyD2DEngine.vcxproj|D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\Transform.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -48,7 +48,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
@@ -67,19 +67,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Transform.cpp",
-              "DocumentMoniker": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\Transform.cpp",
-              "RelativeDocumentMoniker": "MyD2DEngine\\Transform.cpp",
-              "ToolTip": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\Transform.cpp",
-              "RelativeToolTip": "MyD2DEngine\\Transform.cpp",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAQwDQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-10T01:38:18.959Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "DemoGameApp.h",
               "DocumentMoniker": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\DemoGameApp\\DemoGameApp.h",
               "RelativeDocumentMoniker": "DemoGameApp\\DemoGameApp.h",
@@ -92,7 +79,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "D2DRenderManager.h",
               "DocumentMoniker": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\D2DRenderManager.h",
               "RelativeDocumentMoniker": "MyD2DEngine\\D2DRenderManager.h",
@@ -105,33 +92,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "D2DRenderManager.cpp",
               "DocumentMoniker": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\D2DRenderManager.cpp",
               "RelativeDocumentMoniker": "MyD2DEngine\\D2DRenderManager.cpp",
               "ToolTip": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\D2DRenderManager.cpp",
               "RelativeToolTip": "MyD2DEngine\\D2DRenderManager.cpp",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAcwIUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAcwIUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-06-10T01:37:29.01Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "DemoGameApp.cpp",
               "DocumentMoniker": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\DemoGameApp\\DemoGameApp.cpp",
               "RelativeDocumentMoniker": "DemoGameApp\\DemoGameApp.cpp",
               "ToolTip": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\DemoGameApp\\DemoGameApp.cpp",
               "RelativeToolTip": "DemoGameApp\\DemoGameApp.cpp",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAFEAAABJAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-06-09T11:32:18.935Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
+              "Title": "Transform.cpp",
+              "DocumentMoniker": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\Transform.cpp",
+              "RelativeDocumentMoniker": "MyD2DEngine\\Transform.cpp",
+              "ToolTip": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\Transform.cpp",
+              "RelativeToolTip": "MyD2DEngine\\Transform.cpp",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAQwDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-10T01:38:18.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Application.cpp",
               "DocumentMoniker": "D:\\lsh\\Github\\DirectX2D_1\\MyD2DEngine\\MyD2DEngine\\Application.cpp",
               "RelativeDocumentMoniker": "MyD2DEngine\\Application.cpp",

@@ -100,6 +100,7 @@ void Application::Initialize()
 	// D2DManager 초기화
 	m_D2DRenderManager = new D2DRenderManager;
 	m_D2DRenderManager->Initialize();
+	m_D2DRenderManager->GetScreenSize(m_Width, m_Height);
 	m_D2DRenderManager->GetD2D1DeviceContext7(m_d2dDeviceContext.Get());
 
 	// GameTime 초기화

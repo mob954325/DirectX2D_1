@@ -1,18 +1,22 @@
-#pragma once
+ï»¿#pragma once
 class Transform
 {
-public:
-	Transform* parent;
+protected:
+	Transform* camera = nullptr;
+	Transform* parent = nullptr;
+
 	D2D1_VECTOR_2F position;
 	float rotation;
 	D2D1_VECTOR_2F scale;
 
+	bool isUnityCoords = true;
 
-	// »ı¼ºÀÚ
+public:
+	// ìƒì„±ì
 	Transform()
-		: parent(nullptr), position({ 0.0f, 0.0f }), rotation(0.0f), scale({1.0f, 1.0f}) { }
+		: position({ 0.0f, 0.0f }), rotation(0.0f), scale({1.0f, 1.0f}) { }
 
-	// get / set
+	// get, set
 	D2D1_VECTOR_2F GetPosition() { return position; }
 	void SetPosition(float x, float y) { position.x = x; position.y = y; }
 
@@ -22,40 +26,43 @@ public:
 	D2D1_VECTOR_2F GetScale() { return scale; }
 	void SetScale(float scaleX, float scaleY) { scale.x = scaleX; scale.y = scaleY; }
 
+	Transform* GetCamera() { return camera; }
+	void SetCamera(Transform* t) { camera = t; }
+
 	Transform* GetParent() { return parent; }
 	void SetParent(Transform* t) { parent = t; }
 
+	bool IsUnityCoords() { return isUnityCoords; }
+	void SetIsUnityCoords(bool value) { isUnityCoords = value; }
 
 	/// <summary>
-	/// ·ÎÄÃ ¸ÅÆ®¸¯½º ¹İÈ¯
+	/// ë§¤íŠ¸ë¦­ìŠ¤ë¡œ transform ê°’ ì„¤ì •
 	/// </summary>
-	D2D1_MATRIX_3X2_F ToLocalMatrix()
-	{
-		return
-			D2D1::Matrix3x2F::Scale(scale.x, scale.y) *
-			D2D1::Matrix3x2F::Rotation(rotation) *
-			D2D1::Matrix3x2F::Translation(position.x, position.y);
-	}
+	void SetTransformToMatrix(D2D1_MATRIX_3X2_F matrix);
 
 	/// <summary>
-	/// ¿ùµå ¸ÅÆ®¸¯½º ¹İÈ¯
+	/// ë¡œì»¬ ë§¤íŠ¸ë¦­ìŠ¤ ë°˜í™˜
 	/// </summary>
-	D2D1_MATRIX_3X2_F ToWorldMatrix()
-	{
-		if (parent == nullptr)
-			return ToLocalMatrix();
-		else
-			return ToLocalMatrix() * parent->ToWorldMatrix();
-	}
+	D2D1_MATRIX_3X2_F ToLocalMatrix();
 
 	/// <summary>
-	/// ¸ğµç °ªÀ» ÃÊ±âÈ­ ( scaleÀº (1,1) , ³ª¸ÓÁö ´Ù 0À¸·Î ÃÊ±âÈ­ )
+	/// í˜„ì¬ ë¡œì»¬ ì¢Œí‘œì˜ ì—­í–‰ë ¬
 	/// </summary>
-	void Reset()
-	{
-		SetPosition(0.0f, 0.0f);
-		SetRotation(0.0f);
-		SetScale(1.0f, 1.0f);
-	}	
+	D2D1_MATRIX_3X2_F ToLocalInvertMatrix();
+
+	/// <summary>
+	/// ì›”ë“œ ë§¤íŠ¸ë¦­ìŠ¤ ë°˜í™˜
+	/// </summary>
+	D2D1_MATRIX_3X2_F ToWorldMatrix();
+
+	/// <summary>
+	/// í˜„ì¬ ì›”ë“œ ì¢Œí‘œì˜ ì—­í–‰ë ¬
+	/// </summary>
+	D2D1_MATRIX_3X2_F ToWorldInvertMatrix();
+
+	/// <summary>
+	/// ëª¨ë“  ê°’ì„ ì´ˆê¸°í™” ( scaleì€ (1,1) , ë‚˜ë¨¸ì§€ ë‹¤ 0ìœ¼ë¡œ ì´ˆê¸°í™” )
+	/// </summary>
+	void Reset();
 };
 

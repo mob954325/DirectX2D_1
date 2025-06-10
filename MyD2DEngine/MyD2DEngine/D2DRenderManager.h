@@ -13,6 +13,7 @@ public:
 	void Render();
 
 	void GetD2D1DeviceContext7(ID2D1DeviceContext7* pD2D1DeviceContext7);
+	void GetScreenSize(int width, int height);
 
 	/// <summary>
 	/// WIC를 통해 이미지를 ID2D1Bitmap1**로 반환하는 함수
@@ -24,8 +25,14 @@ public:
 	HRESULT CreateBitmapFromFile(const wchar_t* path, Transform* transform);
 
 protected:
+	void RenderBitmaps();
+	D2D1::Matrix3x2F GetRenderMatrix(Transform* transform);
+
 	ComPtr<IWICImagingFactory> m_wicImagingFactory;
 	ComPtr<ID2D1DeviceContext7> m_d2dDeviceContext;
 
 	std::vector<std::pair<ComPtr<ID2D1Bitmap1>, Transform*>> bitmaps;
+
+	int screenWidth = 0;
+	int screenHeight = 0;
 };

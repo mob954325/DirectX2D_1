@@ -29,26 +29,7 @@ void D2DRenderManager::Render()
 	m_d2dDeviceContext->Clear(D2D1::ColorF(D2D1::ColorF::DarkSlateBlue));
 
 	// bitmap 랜더링
-	for (auto bitmap : bitmaps)
-	{	
-		if (bitmap.second != nullptr)
-		{
-			m_d2dDeviceContext->SetTransform(bitmap.second->ToWorldMatrix());
-		}
-		else
-		{
-			m_d2dDeviceContext->SetTransform(D2D1::Matrix3x2F::Identity());
-		}
-
-		auto size = bitmap.first->GetSize();
-		D2D1_RECT_F drawRect = D2D1::RectF(
-			-size.width / 2.0f,
-			-size.height / 2.0f,
-			size.width / 2.0f,
-			size.height / 2.0f
-		);
-		m_d2dDeviceContext->DrawBitmap(bitmap.first.Get(), drawRect);
-	}
+	RenderBitmaps();
 
 	m_d2dDeviceContext->EndDraw();
 }
@@ -59,6 +40,12 @@ void D2DRenderManager::GetD2D1DeviceContext7(ID2D1DeviceContext7* pD2D1DeviceCon
 	{
 		m_d2dDeviceContext = pD2D1DeviceContext7;
 	}
+}
+
+void D2DRenderManager::GetScreenSize(int width, int height)
+{
+	screenWidth = width;
+	screenHeight = height;
 }
 
 HRESULT D2DRenderManager::CreateBitmapFromFile(const wchar_t* path)
@@ -109,4 +96,65 @@ HRESULT D2DRenderManager::CreateBitmapFromFile(const wchar_t* path, Transform* t
 	bitmaps.push_back(std::make_pair(outBitmap, transform));
 
 	return hr;
+}
+
+void D2DRenderManager::RenderBitmaps()
+{
+	int count = (int)bitmaps.size();
+	for (int i = 0; i < count; i++)
+	{
+		if (bitmaps[i].second != nullptr)
+		{
+			// Camera Matrix 추가
+			Transform* cameraTransform = bitmaps[i].second->GetCamera();
+			D2D1_MATRIX_3X2_F cameraInverseMatrix =
+				cameraTransform ? cameraTransform->ToWorldInvertMatrix() : D2D1::Matrix3x2F::Identity();
+
+			// Render Matrix 추가
+			D2D1_MATRIX_3X2_F renderMatrix = GetRenderMatrix(bitmaps[i].second);
+
+			// Unity 좌표 Matrix 추가
+			D2D1_MATRIX_3X2_F unityMatrix = bitmaps[i].second->IsUnityCoords() ?
+				D2D1::Matrix3x2F::Scale(1.0f, -1.0f) * D2D1::Matrix3x2F::Translation((FLOAT)(screenWidth / 2), (FLOAT)(screenHeight / 2)) : 
+				D2D1::Matrix3x2F::Identity();
+
+			// 최종 변환 값 계산
+			D2D1_MATRIX_3X2_F finalMatrix = renderMatrix * bitmaps[i].second->ToWorldMatrix() * cameraInverseMatrix * unityMatrix;
+
+			m_d2dDeviceContext->SetTransform(finalMatrix);
+		}
+		else // Transform이 없으면 0,0 위치 설정
+		{
+			m_d2dDeviceContext->SetTransform(D2D1::Matrix3x2F::Identity());
+
+			//wchar_t buffer[128];
+			//swprintf_s(buffer, 128, L"&d번 인덱스 Transform 없음\n", i);
+			//OutputDebugStringW(buffer);
+		}
+
+		// bitmap 이미지 중앙으로 옮기기
+		auto size = bitmaps[i].first->GetSize();
+		D2D1_RECT_F drawRect = D2D1::RectF(
+			-size.width / 2.0f,
+			-size.height / 2.0f,
+			size.width / 2.0f,
+			size.height / 2.0f
+		);
+
+		m_d2dDeviceContext->DrawBitmap(bitmaps[i].first.Get(), drawRect); // Bitmap 출력
+	}
+}
+
+D2D1::Matrix3x2F D2DRenderManager::GetRenderMatrix(Transform* transform)
+{
+	if (transform == nullptr)
+		return D2D1::Matrix3x2F::Identity();
+
+	float scaleX = 1.0f;
+	float scaleY = transform->IsUnityCoords() ? -1.0f : 1.0f; // 유니티 좌표계면 y축 상하 반전
+
+	float offsetX = 0.0f;
+	float offsetY = 0.0f;
+
+	return D2D1::Matrix3x2F::Scale(scaleX, scaleY) * D2D1::Matrix3x2F::Translation(offsetX, offsetY);
 }

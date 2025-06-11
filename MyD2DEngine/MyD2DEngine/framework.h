@@ -21,3 +21,6 @@
 
 #include <wincodec.h>
 #pragma comment(lib,"windowscodecs.lib")
+
+#include <dwrite.h>
+#pragma comment(lib,"dwrite.lib")

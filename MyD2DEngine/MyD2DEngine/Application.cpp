@@ -6,6 +6,8 @@
 #include "Input.h"
 #include "GameTime.h"
 
+// TODO : BitmapRenderer divece context nullptr
+
 LRESULT CALLBACK WindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
 	Application* pThis = nullptr;
@@ -100,8 +102,8 @@ void Application::Initialize()
 	// D2DManager 초기화
 	m_D2DRenderManager = new D2DRenderManager;
 	m_D2DRenderManager->Initialize();
-	m_D2DRenderManager->GetScreenSize(m_Width, m_Height);
-	m_D2DRenderManager->GetD2D1DeviceContext7(m_d2dDeviceContext.Get());
+	m_D2DRenderManager->SetScreenSize(m_Width, m_Height);
+	m_D2DRenderManager->SetD2D1DeviceContext7(m_d2dDeviceContext.Get());
 
 	// GameTime 초기화
 	Singleton<GameTime>::GetInstance().InitTime();
@@ -215,5 +217,5 @@ void Application::ResizeSwapChainBuffers()
 	m_d2dDeviceContext->SetTarget(m_d2dBitmapTarget.Get());
 
 	// 렌더 매니저에도 다시 설정
-	m_D2DRenderManager->GetD2D1DeviceContext7(m_d2dDeviceContext.Get());
+	m_D2DRenderManager->SetD2D1DeviceContext7(m_d2dDeviceContext.Get());
 }

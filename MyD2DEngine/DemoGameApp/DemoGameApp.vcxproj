@@ -127,9 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BitmapRenderer.h" />
     <ClInclude Include="DemoGameApp.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BitmapRenderer.cpp" />
     <ClCompile Include="DemoGameApp.cpp" />
     <ClCompile Include="Game.cpp" />
   </ItemGroup>

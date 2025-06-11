@@ -1,6 +1,6 @@
 ﻿#pragma once
 #include "../MyD2DEngine/Application.h"
-#include "../MyD2DEngine/Transform.h"
+#include "BitmapRenderer.h"
 #include <vector>
 
 class DemoGameApp : public Application
@@ -12,16 +12,17 @@ public:
 	void Update() override;
 
 	Transform* camera;
-	Transform* transform_Sun;
-	Transform* transform_Earth;
-	Transform* transform_Moon;
+	BitmapRenderer* m_Sun;
+	BitmapRenderer* m_Earth;
+	BitmapRenderer* m_Moon;
 
 private:
 	void FlagInputUpdate();		// 인풋으로 플래그 전환 내용 업데이트
 	void MoveCamera();			// 카메라 이동 관리
 	void SolarSystemUpdate();	// 태양계 이동 관리
+	void Reset();				// 프로젝트 초기 상태로 되돌리기
 
-	std::vector<Transform*> objects;
+	std::vector<BitmapRenderer*> objects;
 
 	float baseRotateSpeed = 360.0f;
 	float cameraMoveSpeed = 10.0f;

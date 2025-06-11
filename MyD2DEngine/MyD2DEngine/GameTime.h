@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <iostream>
 #include <windows.h>
 #include "Singleton.h"
@@ -15,7 +15,7 @@ public:
 	float GetElapsedTime();
 
 private:
-	LARGE_INTEGER freq, curr, prev, start, end;
+	LARGE_INTEGER freq = {}, curr = {}, prev = {}, start = {}, end = {};
 	float deltaTime;
 	float timeElapsed;
 };

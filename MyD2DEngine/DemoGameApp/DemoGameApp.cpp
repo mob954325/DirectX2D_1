@@ -3,6 +3,8 @@
 #include "../MyD2DEngine/Singleton.h"
 #include "../MyD2DEngine/Input.h"
 #include "../MyD2DEngine/GameTime.h"
+#include "BitmapRenderer.h"
+
 
 void DemoGameApp::Initialize()
 {
@@ -11,31 +13,47 @@ void DemoGameApp::Initialize()
 	camera = new Transform();
 
 	// Sun -> Earth -> Moon
-	transform_Sun = new Transform();
-	transform_Sun->SetScale(0.1f, 0.1f);
-	transform_Sun->SetCamera(camera);
-	HRESULT hr = m_D2DRenderManager->CreateBitmapFromFile(L"../Resource/Sun.png", transform_Sun);
+	m_Sun = new BitmapRenderer();
+	m_Sun->GetTransform()->SetScale(0.1f, 0.1f);
+	m_Sun->GetTransform()->SetCamera(camera);
+	
+	ComPtr<ID2D1Bitmap1> outSunBitmap;
+	HRESULT hr = m_D2DRenderManager->CreateBitmapFromFile(L"../Resource/Sun.png", outSunBitmap.GetAddressOf());
+	m_Sun->SetBitmap(outSunBitmap);
 	assert(SUCCEEDED(hr));
 
-	transform_Earth = new Transform();
-	transform_Earth->SetScale(0.5f, 0.5f);
-	transform_Earth->SetPosition(0.0f, 1000.0f);
-	transform_Earth->SetParent(transform_Sun);
-	transform_Earth->SetCamera(camera);
-	hr = m_D2DRenderManager->CreateBitmapFromFile(L"../Resource/Earth.png", transform_Earth);
+	m_Earth = new BitmapRenderer();
+	m_Earth->GetTransform()->SetScale(0.5f, 0.5f);
+	m_Earth->GetTransform()->SetPosition(0.0f, 1000.0f);
+	m_Earth->GetTransform()->SetParent(m_Sun->GetTransform());
+	m_Earth->GetTransform()->SetCamera(camera);
+
+	ComPtr<ID2D1Bitmap1> outEarthBitmap;
+	hr = m_D2DRenderManager->CreateBitmapFromFile(L"../Resource/Earth.png", outEarthBitmap.GetAddressOf());
+	m_Earth->SetBitmap(outEarthBitmap);
 	assert(SUCCEEDED(hr));
 
-	transform_Moon = new Transform();
-	transform_Moon->SetScale(0.5f, 0.5f);
-	transform_Moon->SetPosition(0.0f, 1000.0f);
-	transform_Moon->SetParent(transform_Earth);
-	transform_Moon->SetCamera(camera);
-	hr = m_D2DRenderManager->CreateBitmapFromFile(L"../Resource/Moon.png", transform_Moon);
+	m_Moon = new BitmapRenderer();
+	m_Moon->GetTransform()->SetScale(0.5f, 0.5f);
+	m_Moon->GetTransform()->SetPosition(0.0f, 1000.0f);
+	m_Moon->GetTransform()->SetParent(m_Earth->GetTransform());
+	m_Moon->GetTransform()->SetCamera(camera);
+
+	ComPtr<ID2D1Bitmap1> outMoonBitamp;
+	hr = m_D2DRenderManager->CreateBitmapFromFile(L"../Resource/Moon.png", outMoonBitamp.GetAddressOf());
+	m_Moon->SetBitmap(outMoonBitamp);
 	assert(SUCCEEDED(hr));
 
-	objects.push_back(transform_Sun);
-	objects.push_back(transform_Earth);
-	objects.push_back(transform_Moon);
+	objects.push_back(m_Sun);
+	objects.push_back(m_Earth);
+	objects.push_back(m_Moon);
+
+	for (int i = 0; i < objects.size(); i++)
+	{
+		objects[i]->SetRenderManager(m_D2DRenderManager);
+		objects[i]->SetScreenSize(m_Width, m_Height);
+		m_D2DRenderManager->AddRenderObject(objects[i]);
+	}
 }
 
 void DemoGameApp::Render()
@@ -47,14 +65,14 @@ void DemoGameApp::Uninitialize()
 {
 	__super::Uninitialize();
 
-	// delete transform
-	transform_Sun = nullptr;
-	transform_Earth = nullptr;
-	transform_Moon = nullptr;
+	// delete BitmapRenderer
+	for (int i = 0; i < objects.size(); i++)
+	{
+		delete objects[i];
+		objects[i] = nullptr;
+	}
 
-	delete transform_Sun;
-	delete transform_Earth;
-	delete transform_Moon;
+	objects.clear();
 }
 
 void DemoGameApp::Update()
@@ -80,10 +98,15 @@ void DemoGameApp::FlagInputUpdate()
 
 	if (Singleton<Input>::GetInstance().IsKeyPressed('Y')) // Y : 유니티 좌표계 사용
 	{
-		for (Transform* transform : objects)
+		for (BitmapRenderer* comp : objects)
 		{
-			transform->SetIsUnityCoords(!transform->IsUnityCoords());
+			comp->GetTransform()->SetIsUnityCoords(!comp->GetTransform()->IsUnityCoords());
 		}
+	}
+
+	if (Singleton<Input>::GetInstance().IsKeyPressed('U'))
+	{
+		Reset();
 	}
 }
 
@@ -115,12 +138,18 @@ void DemoGameApp::SolarSystemUpdate()
 {
 	if (!isSolarSystemMove) return;
 
-	float rotation_sun = transform_Sun->GetRotation();
-	transform_Sun->SetRotation(rotation_sun + baseRotateSpeed * sunRotateRatio * Singleton<GameTime>::GetInstance().GetDeltaTime());
+	float rotation_sun = m_Sun->GetTransform()->GetRotation();
+	m_Sun->GetTransform()->SetRotation(rotation_sun + baseRotateSpeed * sunRotateRatio * Singleton<GameTime>::GetInstance().GetDeltaTime());
 
-	float rotation_earth = transform_Earth->GetRotation();
-	transform_Earth->SetRotation(rotation_earth + baseRotateSpeed * earthRotateRatio * Singleton<GameTime>::GetInstance().GetDeltaTime());
+	float rotation_earth = m_Earth->GetTransform()->GetRotation();
+	m_Earth->GetTransform()->SetRotation(rotation_earth + baseRotateSpeed * earthRotateRatio * Singleton<GameTime>::GetInstance().GetDeltaTime());
 
 	//float rotation_moon = transform_Moon->GetRotation();
 	//transform_Moon->SetRotation(rotation_moon + baseRotateSpeed * moonRotateRatio * Singleton<GameTime>::GetInstance().GetDeltaTime());
+}
+
+void DemoGameApp::Reset()
+{
+	m_Sun->GetTransform()->SetPosition(0.0f, 0.0f);
+	camera->SetPosition(0.0f, 0.0f);
 }

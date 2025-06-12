@@ -4,6 +4,18 @@
 void BitmapRenderer::Render()
 {
 	if (m_RenderManager == nullptr) return;
+	//if (m_bitmap != nullptr)
+	//{
+	//	// 최종 변환 값 계산
+	//	finalMatrix =
+	//		//m_Transform->IsUnityCoords() ? unityRenderMatrix : normalRenderMatrix *	// Render Matrix
+	//		m_Transform->ToWorldMatrix() *											// m_transform world matrix 
+	//		m_RenderManager->GetCameraInvertMatrix(); //*								// MainCamera invert matrix
+	//		//unityCoordMatrix;														// unity coord Matrix
+
+	//	m_RenderManager->SetBitmapTransform(finalMatrix);
+	//}
+
 	if (m_bitmap != nullptr)
 	{
 		// Camera Matrix 추가
@@ -34,8 +46,8 @@ void BitmapRenderer::Render()
 		size.width / 2.0f,
 		size.height / 2.0f
 	);
-	// m_d2dDeviceContext->DrawBitmap(comp->GetBitmap().Get(), comp->GetDestRec());
-	m_RenderManager->DrawBitmap(m_bitmap, destRect); //
+
+	m_RenderManager->DrawBitmap(m_bitmap);
 }
 
 void BitmapRenderer::SetRenderManager(D2DRenderManager*& manager)

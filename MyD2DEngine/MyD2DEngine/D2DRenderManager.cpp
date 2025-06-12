@@ -108,6 +108,18 @@ void D2DRenderManager::PrintText(const wchar_t* str, float left, float top)
 	m_d2dDeviceContext->DrawTextW(str, (UINT32)wcslen(str), m_pDWriteTextFormat.Get(), D2D1::RectF(left, top, left + 300, top + 250), m_pBrush.Get());
 }
 
+D2D1_MATRIX_3X2_F D2DRenderManager::GetCameraInvertMatrix()
+{
+	if (m_camTransform != nullptr)
+	{
+		return m_camTransform->ToWorldInvertMatrix();
+	}
+	else
+	{
+		return D2D1::Matrix3x2F::Identity();
+	}
+}
+
 HRESULT D2DRenderManager::CreateBitmapFromFile(const wchar_t* path, ID2D1Bitmap1** outBitmap)
 {
 	ComPtr<IWICBitmapDecoder>     decoder;

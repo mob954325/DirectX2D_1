@@ -32,6 +32,8 @@ public:
 	HRESULT CreateBitmapFromFile(const wchar_t* path, ID2D1Bitmap1** outBitmap);
 	void AddRenderObject(IRenderer* comp);
 	void PrintText(const wchar_t* str, float left, float top);
+	D2D1_MATRIX_3X2_F GetCameraInvertMatrix();
+	void SetMainCamera(Transform* t) { m_camTransform = t; }
 
 protected:
 	ComPtr<IWICImagingFactory> m_wicImagingFactory;
@@ -42,6 +44,7 @@ protected:
 	ComPtr<IDWriteTextFormat> m_pDWriteTextFormat;
 	ComPtr<ID2D1SolidColorBrush> m_pBrush; // 브러시 개체 인터페이스 포인터 변수
 
+	Transform* m_camTransform; // 현재 렌더링하는 카메라 transform 참조값
 	std::vector<IRenderer*> renderList;
 
 	int screenWidth = 0;

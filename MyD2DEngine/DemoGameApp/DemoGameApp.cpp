@@ -54,6 +54,8 @@ void DemoGameApp::Initialize()
 		objects[i]->SetScreenSize(m_Width, m_Height);
 		m_D2DRenderManager->AddRenderObject(objects[i]);
 	}
+
+	m_D2DRenderManager->SetMainCamera(camera);
 }
 
 void DemoGameApp::Render()

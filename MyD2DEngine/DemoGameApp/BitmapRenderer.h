@@ -17,17 +17,17 @@ public:
 
 	void SetRenderManager(D2DRenderManager*& manager);
 	void SetBitmap(const ComPtr<ID2D1Bitmap1>& bitmap) { m_bitmap = bitmap; }
-	void SetScreenSize(int width, int height) { screenWidth = width; screenHeight = height; };
+	void SetScreenSize(int width, int height);
+	void SetOffSet(float x, float y);
 	Transform* GetTransform() { return m_Transform; }
 
 protected:
 	D2DRenderManager* m_RenderManager = nullptr;
 	D2D1::Matrix3x2F GetRenderMatrix(Transform* transform);
 
-	D2D1_MATRIX_3X2_F unityCoordMatrix = 
-		D2D1::Matrix3x2F::Scale(1.0f, -1.0f) * D2D1::Matrix3x2F::Translation((FLOAT)(screenWidth / 2), (FLOAT)(screenHeight / 2)); // 유니티 좌표 전환 메트릭스
-	D2D1_MATRIX_3X2_F normalRenderMatrix = D2D1::Matrix3x2F::Scale(0.0f, -1.0f) * D2D1::Matrix3x2F::Translation(offsetX, offsetY);
-	D2D1_MATRIX_3X2_F unityRenderMatrix = D2D1::Matrix3x2F::Scale(0.0f, -1.0f) * D2D1::Matrix3x2F::Translation(offsetX, offsetY);
+	D2D1_MATRIX_3X2_F unityCoordMatrix = D2D1::Matrix3x2F::Identity(); // 유니티 좌표 전환 메트릭스
+	D2D1_MATRIX_3X2_F normalRenderMatrix = D2D1::Matrix3x2F::Scale(1.0f, 1.0f) * D2D1::Matrix3x2F::Translation(offsetX, offsetY);
+	D2D1_MATRIX_3X2_F unityRenderMatrix = D2D1::Matrix3x2F::Scale(1.0f, -1.0f) * D2D1::Matrix3x2F::Translation(offsetX, offsetY);
 
 	Transform* m_Transform = new Transform();
 	Microsoft::WRL::ComPtr<ID2D1Bitmap1> m_bitmap;

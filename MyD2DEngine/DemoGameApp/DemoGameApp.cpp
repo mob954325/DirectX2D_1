@@ -16,10 +16,10 @@ void DemoGameApp::Initialize()
 	m_Sun = new BitmapRenderer();
 	m_Sun->GetTransform()->SetScale(0.1f, 0.1f);
 	m_Sun->GetTransform()->SetCamera(camera);
-	
 	ComPtr<ID2D1Bitmap1> outSunBitmap;
 	HRESULT hr = m_D2DRenderManager->CreateBitmapFromFile(L"../Resource/Sun.png", outSunBitmap.GetAddressOf());
 	m_Sun->SetBitmap(outSunBitmap);
+	m_Sun->SetOffSet(outSunBitmap.Get()->GetSize().width / 2 * -1, outSunBitmap.Get()->GetSize().height / 2);
 	assert(SUCCEEDED(hr));
 
 	m_Earth = new BitmapRenderer();
@@ -31,6 +31,7 @@ void DemoGameApp::Initialize()
 	ComPtr<ID2D1Bitmap1> outEarthBitmap;
 	hr = m_D2DRenderManager->CreateBitmapFromFile(L"../Resource/Earth.png", outEarthBitmap.GetAddressOf());
 	m_Earth->SetBitmap(outEarthBitmap);
+	m_Earth->SetOffSet(outSunBitmap.Get()->GetSize().width / 2 * -1, outSunBitmap.Get()->GetSize().height / 2);
 	assert(SUCCEEDED(hr));
 
 	m_Moon = new BitmapRenderer();
@@ -42,6 +43,7 @@ void DemoGameApp::Initialize()
 	ComPtr<ID2D1Bitmap1> outMoonBitamp;
 	hr = m_D2DRenderManager->CreateBitmapFromFile(L"../Resource/Moon.png", outMoonBitamp.GetAddressOf());
 	m_Moon->SetBitmap(outMoonBitamp);
+	m_Moon->SetOffSet(outSunBitmap.Get()->GetSize().width / 2 * -1, outSunBitmap.Get()->GetSize().height / 2);
 	assert(SUCCEEDED(hr));
 
 	objects.push_back(m_Sun);

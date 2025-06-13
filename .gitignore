@@ -1044,6 +1044,5 @@ dkms.conf
 # Raspberry Pi Pico disassembler file
 *.dis
 
-# ignore build file
-MyD2DEngine\MyD2DEngine\x64
-#D:\lsh\Github\DirectX2D_1\MyD2DEngine\MyD2DEngine\x64\Debug\MyD2DEngine.tlog\Lib-link.read.1.tlog
+# ignore .vs
+.vs/

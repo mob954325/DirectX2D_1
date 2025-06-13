@@ -10,10 +10,16 @@ void Transform::SetTransformToMatrix(D2D1_MATRIX_3X2_F matrix)
 /// </summary>
 D2D1_MATRIX_3X2_F Transform::ToLocalMatrix()
 {
-	return
-		D2D1::Matrix3x2F::Scale(scale.x, scale.y) *
-		D2D1::Matrix3x2F::Rotation(rotation) *
-		D2D1::Matrix3x2F::Translation(position.x, position.y);
+	if (dirty)
+	{
+		cachedMatrix = 
+			D2D1::Matrix3x2F::Scale(scale.x, scale.y) *
+			D2D1::Matrix3x2F::Rotation(rotation) *
+			D2D1::Matrix3x2F::Translation(position.x, position.y);
+		dirty = false;
+	}
+
+	return cachedMatrix;
 }
 
 /// <summary>

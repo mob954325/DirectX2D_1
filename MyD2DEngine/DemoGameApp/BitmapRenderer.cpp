@@ -20,7 +20,7 @@ void BitmapRenderer::Render()
 			finalMatrix =
 				normalRenderMatrix *						// Render Matrix
 				m_Transform->ToWorldMatrix() *				// m_transform world matrix 
-				m_RenderManager->GetCameraInvertMatrix();	// MainCamera invert matrix
+				m_RenderManager->GetCameraInvertMatrix();   // MainCamera invert matrix	
 		}
 
 
@@ -45,7 +45,7 @@ void BitmapRenderer::SetOffSet(float x, float y)
 {
 	offsetX = x; offsetY = y;
 	normalRenderMatrix = D2D1::Matrix3x2F::Scale(1.0f, 1.0f) * D2D1::Matrix3x2F::Translation(offsetX, offsetY);
-	unityRenderMatrix = D2D1::Matrix3x2F::Scale(1.0f, -1.0f) * D2D1::Matrix3x2F::Translation(offsetX, offsetY);
+	unityRenderMatrix = D2D1::Matrix3x2F::Scale(1.0f, -1.0f) * D2D1::Matrix3x2F::Translation(offsetX, -offsetY);
 }
 
 D2D1::Matrix3x2F BitmapRenderer::GetRenderMatrix(Transform* transform)

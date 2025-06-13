@@ -9,6 +9,9 @@ protected:
 	float rotation;
 	D2D1_VECTOR_2F scale;
 
+	D2D1_MATRIX_3X2_F cachedMatrix;
+
+	bool dirty = true;	// 행렬 반복 연산 제거용 플래그 변수 ( true : transform 값이 갱신됨 )
 	bool isUnityCoords = true;
 
 public:
@@ -18,13 +21,13 @@ public:
 
 	// get, set
 	D2D1_VECTOR_2F GetPosition() { return position; }
-	void SetPosition(float x, float y) { position.x = x; position.y = y; }
+	void SetPosition(float x, float y) { dirty = true; position.x = x; position.y = y; }
 
 	float GetRotation() { return rotation; }
-	void SetRotation(float rotValue) { rotation = rotValue; }
+	void SetRotation(float rotValue) { dirty = true; rotation = rotValue; }
 
 	D2D1_VECTOR_2F GetScale() { return scale; }
-	void SetScale(float scaleX, float scaleY) { scale.x = scaleX; scale.y = scaleY; }
+	void SetScale(float scaleX, float scaleY) { dirty = true; scale.x = scaleX; scale.y = scaleY; }
 
 	Transform* GetCamera() { return camera; }
 	void SetCamera(Transform* t) { camera = t; }
